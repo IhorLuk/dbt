@@ -1,6 +1,6 @@
 WITH raw_avocado AS (
   SELECT *
-  FROM `winter-cocoa-336514.avocado_data.avocado_prices`
+  FROM {{ source('avocado', 'avocado_prices')}}
 )
 
 SELECT

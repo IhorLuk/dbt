@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: avocado
+    database: winter-cocoa-336514
+    schema: avocado_data
+    tables:
+      - name: avocado_prices
+        identifier: avocado_prices
