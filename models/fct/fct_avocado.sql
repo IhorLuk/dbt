@@ -9,7 +9,9 @@ WITH src_avocado AS (
     FROM {{ ref('src_avocado')}}
 )
 
-SELECT date, avg_price, total_volume, total_bags, y.id as year_id, r.id as region_id
+SELECT 
+    {{ dbt_utils.surrogate_key(['date', 'total_bags'])}} as local_id,
+    date, avg_price, total_volume, total_bags, y.id as year_id, r.id as region_id
 FROM src_avocado a
 JOIN {{ ref('dim_year') }} as y
     ON a.year = y.year
