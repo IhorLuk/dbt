@@ -8,7 +8,7 @@ exposures:
     description: Test Dashboard
 
     depends_on:
-      - ref('mart_fullmoon_reviews')
+      - ref('dim_products')
 
     owner:
       name: Ihor Lukianov

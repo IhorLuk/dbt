@@ -2,27 +2,8 @@ version: 2
 
 models:
 
-  - name: dim_year
+  - name: dim_products
     columns:
-
-      - name: year
+      - name: id
         tests:
-          - accepted_values:
-              values: ['2015',
-                      '2016',
-                      '2017',
-                      '2018',
-                      '2019',
-                      '2020',
-                      '2021',
-                      '2022',
-                      '2023',
-                      '2024',
-                      '2025']
-              quote: false
-      
-  - name: fct_avocado
-    columns:
-      - name: avg_price
-        tests:
-          - positive_value
+          - unique
