@@ -1,18 +1,6 @@
 version: 2
 
 models:
-  - name: dim_region
-    description: Regions of avocado growings
-    columns:
-
-      - name: id
-        description: unique id
-        tests:
-          - unique
-          - not_null
-          - relationships:
-              field: region_id
-              to: ref('fct_avocado')
 
   - name: dim_year
     columns:
