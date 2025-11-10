@@ -8,7 +8,7 @@ exposures:
     description: Test Dashboard
 
     depends_on:
-      - ref('dim_products')
+      - ref('view_orders')
 
     owner:
       name: Ihor Lukianov
