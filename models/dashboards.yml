@@ -1,7 +1,7 @@
 version: 2
 
 exposures:
-  - name: Test Dash
+  - name: Test_Dash
     type: dashboard
     maturity: low
     url: https://80472ecd.us2a.app.preset.io/superset/dashboard/9

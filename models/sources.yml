@@ -7,3 +7,16 @@ sources:
     tables:
       - name: avocado_prices
         identifier: avocado_prices
+
+  - name: ecommerce
+    database: bigquery-public-data
+    schema: thelook_ecommerce
+    tables:
+      - name: orders
+        identifier: orders
+      - name: users
+        identifier: users
+      - name: order_items
+        identifier: order_items
+      - name: products
+        identifier: products
