@@ -7,7 +7,6 @@ select
     id
     ,order_id
     ,user_id
-    ,product_id
     ,inventory_item_id
     ,status
     ,created_at
