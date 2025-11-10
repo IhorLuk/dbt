@@ -10,7 +10,7 @@ select
     ,email
     ,age
     ,gender
-    ,states
+    ,state
     ,city
     ,country
     ,traffic_source
