@@ -5,4 +5,4 @@
 }}
 
 SELECT *
-from {{ ref('src_order_items') }}
+FROM {{ ref('src_order_items') }}
