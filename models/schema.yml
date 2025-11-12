@@ -3,7 +3,39 @@ version: 2
 models:
 
   - name: dim_products
+    description: The products dimension
+    config:
+      contract:
+        enforced: true
     columns:
       - name: id
         tests:
           - unique
+        data_type: integer
+        description: unique identifier of the product
+      - name: cost
+        data_type: float
+        description: cost at the moment
+      - name: category
+        data_type: string
+        description: The classification of the product
+      - name: name
+        data_type: string
+        description: display name of the product
+      - name: brand
+        data_type: string
+        description: producer of the product
+      - name: retail_price
+        data_type: float
+        description: the latest recommended price at the retail stores
+      - name: department
+        data_type: string
+        description: the sales department
+        data_tests:
+          - accepted_values:
+              values: ["Women", "Men"]
+      - name: sku
+        data_type: string
+      - name: distribution_center_id
+        data_type: integer
+

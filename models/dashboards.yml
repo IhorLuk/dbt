@@ -4,7 +4,7 @@ exposures:
   - name: Test_Dash
     type: dashboard
     maturity: low
-    url: https://80472ecd.us2a.app.preset.io/superset/dashboard/9
+    url: https://analytics.tableau.net/dash01
     description: Test Dashboard
 
     depends_on:
@@ -12,4 +12,4 @@ exposures:
 
     owner:
       name: Ihor Lukianov
-      email: test@gmail.com
+      email: test@mail.com
