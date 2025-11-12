@@ -4,7 +4,7 @@
     config(
         materialized='incremental',
         unique_key='order_id',
-        incremental_strategy='delete+insert',
+        incremental_strategy='merge',
         on_schema_change='sync_all_columns'
     )
 }}
@@ -17,5 +17,5 @@ SELECT
 FROM {{ ref('src_orders') }}
 
 {% if is_incremental() %}
-    WHERE created_at >= CURRENT_DATE - INTERVAL '{{ lookback_days }} days'
+    WHERE created_at >= TIMESTAMP(CURRENT_DATE() - INTERVAL {{ lookback_days }} DAY)
 {% endif %}
