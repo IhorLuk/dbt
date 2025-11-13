@@ -23,5 +23,5 @@ unit_tests:
 
     expect:
       rows:
-        - { id: 1, user_id: 10, product_id: 100, sale_price: 50.0, gender: 'M', state: 'CA', country: 'USA', traffic_source: 'ad', cost: 10.0, category: 'shoes' }
+        - { id: 1, user_id: 20, product_id: 100, sale_price: 50.0, gender: 'M', state: 'CA', country: 'USA', traffic_source: 'ad', cost: 10.0, category: 'shoes' }
         - { id: 2, user_id: 20, product_id: 200, sale_price: 20.0, gender: 'F', state: 'TX', country: 'USA', traffic_source: 'organic', cost: 5.0, category: 'bags' }
