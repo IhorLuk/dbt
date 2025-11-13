@@ -23,6 +23,8 @@ models:
         data_type: string
         description: display name of the product
       - name: brand
+        # tests:
+        #   - unique
         data_type: string
         description: producer of the product
       - name: retail_price

@@ -1,0 +1,27 @@
+version: 2
+
+unit_tests:
+  - name: test_fct_order_items_joined
+    description: "Validate join logic between order_items, users, and products."
+    model: view_orders
+
+    given:
+      - input: ref('fct_order_items')
+        rows:
+          - { id: 1, user_id: 10, product_id: 100, sale_price: 50.0 }
+          - { id: 2, user_id: 20, product_id: 200, sale_price: 20.0 }
+
+      - input: ref('dim_users')
+        rows:
+          - { id: 10, gender: 'M', state: 'CA', country: 'USA', traffic_source: 'ad' }
+          - { id: 20, gender: 'F', state: 'TX', country: 'USA', traffic_source: 'organic' }
+
+      - input: ref('dim_products')
+        rows:
+          - { id: 100, cost: 10.0, category: 'shoes' }
+          - { id: 200, cost: 5.0, category: 'bags' }
+
+    expect:
+      rows:
+        - { id: 1, user_id: 10, product_id: 100, sale_price: 50.0, gender: 'M', state: 'CA', country: 'USA', traffic_source: 'ad', cost: 10.0, category: 'shoes' }
+        - { id: 2, user_id: 20, product_id: 200, sale_price: 20.0, gender: 'F', state: 'TX', country: 'USA', traffic_source: 'organic', cost: 5.0, category: 'bags' }
