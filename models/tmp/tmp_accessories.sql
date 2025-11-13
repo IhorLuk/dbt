@@ -6,7 +6,7 @@
 
 select
     id
-    ,cost
+    -- ,cost
     ,category
     ,name
     ,brand
